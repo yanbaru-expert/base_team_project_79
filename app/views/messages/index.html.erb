@@ -1,0 +1,8 @@
+<%= link_to "投稿画面へ", new_message_path %>
+<% @messages.each do |message| %>
+  <p>
+   <%= message.title %>
+   <%= message.content %>
+   <%= link_to "詳細", message_path(message.id) %>
+  </p>
+<% end %>
